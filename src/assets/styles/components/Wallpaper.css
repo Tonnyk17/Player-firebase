@@ -1,0 +1,53 @@
+.wall-container{
+    height: 70vh;
+    width: 100%;
+    background-image: url("https://i.postimg.cc/DfhHNw2N/Cyberpunk2077.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.info-container{
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: flex-end;
+}
+.logo{
+    width: 300px;
+}
+.grid-info{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.main-play-button{
+    background-color: white;
+    color:black;
+    font-size: 18px;
+    width: 50%;
+    margin: 0 auto;
+    padding: 4px;
+    border-radius: 5px;
+    font-weight: 600;
+
+}
+.main-play-button:hover{
+    background-color: rgb(221, 221, 221);
+}
+
+@media screen and (min-width:990px){
+    .wall-container{
+       height: 550px;
+    }
+    
+    .info-container{
+        align-items: center;
+        justify-items: left;
+    }
+    .logo{
+        width: 400px;
+    }
+}

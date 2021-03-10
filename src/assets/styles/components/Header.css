@@ -1,0 +1,35 @@
+
+.header{
+    position: relative; 
+    
+}
+.header-container{
+    
+    position: absolute;
+    top: 0;
+    
+}
+.title-container{
+    text-align: center;
+    margin-top: 10px;
+    display: flex;
+    color: white;
+}
+.page-icon{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+.title{
+    font-weight: bold;
+    font-size: 40px;
+    cursor: pointer;
+}
+@media screen and (min-width: 800px ){
+    .header-container{
+        left: 35px;
+        
+    }
+}
+
+
