@@ -1,0 +1,10 @@
+.Video-container{
+    width: 100%;
+}
+
+@media screen and (min-width:800px){
+    .Video-container{
+        padding-top: 70px;
+        display: flex;
+    }
+}

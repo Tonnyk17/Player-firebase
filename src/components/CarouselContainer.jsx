@@ -1,5 +1,5 @@
-import React from "react";
-import Carousel from "./Carousel";
+import React, { Suspense, lazy } from "react";
+const Carousel= lazy(() => import ("./Carousel"));
 import "../assets/styles/components/CarouselContainer.css";
 
 const CarouselsContainer = () => {
@@ -21,7 +21,9 @@ const CarouselsContainer = () => {
         <>
             <div className="carousel-container">
                 {titles.map(item => (
-                    <Carousel title={item.title} id={item.id}/>
+                    <Suspense fallback={<h1>Loading...</h1>}>
+                         <Carousel title={item.title} id ={item.id}/>
+                    </Suspense>
                 ))
 
                 }

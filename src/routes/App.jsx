@@ -5,6 +5,8 @@ import MainPage from "../containers/MainPage";
 import Layout from "../components/Layout";
 import "../assets/styles/index.css";
 import NotFound from "../containers/NotFound";
+import VideoContainer from "../containers/VideoContainer";
+
 
 const App = () => {
     return(
@@ -12,6 +14,7 @@ const App = () => {
             <Layout>
                 <Switch>
                     <Route exact path="/" component={MainPage}/>
+                    <Route exact path="/watch" component={VideoContainer}/>
                     <Route component={NotFound}/>
                 </Switch>
             </Layout>

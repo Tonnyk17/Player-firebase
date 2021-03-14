@@ -15,7 +15,7 @@ const Carouselitem = ({Character}) => {
                      alt={Character.name} 
                      className="item-image"
                 />
-                <Link to="/">
+                <Link to="/watch">
                      <div className="item-info">
                          <div className="play-button">
                              <i className="fas fa-play-circle size"/>

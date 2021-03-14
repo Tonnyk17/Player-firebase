@@ -1,0 +1,54 @@
+.cards-container{
+    margin-top: 10px;
+    border-top: 1px solid rgb(73, 73, 73);
+}
+.card-info{
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    
+}
+.card-image{
+    width: 90%;
+    height: 200px; 
+}
+.video-name{
+    font-size: 16px;
+}
+.duration{
+    font-size: 14px;
+    color: #B2ACA2;
+}
+.card-info-text{
+    text-align: left;
+    padding-left: 5%;
+    margin-top: 5px;
+}
+
+@media screen and (min-width:700px){
+    .card-image{
+        width: 80%;
+        height: 300px;
+    }
+}
+@media screen and (min-width:800px){
+    .cards-container{
+        width: 30%;
+        margin-left:5% ;
+        border: none;
+    }
+    .card-info{
+        display: flex;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+    .card-image{
+        width: 40%;
+        height: 100px;
+    }
+    .card-info-text{
+        padding-left: 5px;
+        margin-top: 0px;
+    }
+    
+}

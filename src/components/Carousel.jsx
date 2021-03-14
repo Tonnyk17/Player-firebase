@@ -1,12 +1,17 @@
-import React,{useState,useEffect} from "react";
+import React from "react";
 import Carouselitem from "./Carouselitem";
 import "../assets/styles/components/Carousel.css";
 import rightArrow from "../assets/images/right.svg";
 import leftArrow from "../assets/images/left.svg";
+import initialState from "../initialState";
+
 
 
 const Carousel = ({title,id}) => {
-    const [character,setCharacter] = useState([]);
+
+   
+    initialState();
+   
     const fila = document.getElementById(`${id}`);
 
     const handleMoveRight = () => (
@@ -16,12 +21,7 @@ const Carousel = ({title,id}) => {
         fila.scrollLeft -= fila.offsetWidth
     );
 
-    useEffect(() => {
-        fetch("https://rickandmortyapi.com/api/character")
-        .then(response => response.json())
-        .then(data => setCharacter(data.results));
-        
-    },[])
+   
     return(
         <>
             <h2 className="Carousel-title h3">{title}</h2>
@@ -34,8 +34,10 @@ const Carousel = ({title,id}) => {
                     />
 
                     <div className="Carousel-container" id={id}>
-                        {character.map(item => (
-                            <Carouselitem Character={item} key={item.id}/>
+                        { initialState().map(item => (
+                        
+                                <Carouselitem Character={item} key={item.id}/>
+                           
                         ))
 
                         }

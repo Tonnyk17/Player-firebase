@@ -1,13 +1,6 @@
 
-.header{
-    position: relative; 
-    
-}
-.header-container{
-    
-    position: absolute;
-    top: 0;
-    
+.header-container, .header{
+    width: 100%;
 }
 .title-container{
     text-align: center;
@@ -27,9 +20,13 @@
 }
 @media screen and (min-width: 800px ){
     .header-container{
-        left: 35px;
-        
+        padding-left: 50px;
+        position: fixed;
+        background-color: black;
+        z-index: 500;
     }
+    
+
 }
 
 
