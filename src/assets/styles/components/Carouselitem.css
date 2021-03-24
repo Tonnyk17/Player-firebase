@@ -2,14 +2,14 @@
 .item{
     width: 150px;
     margin: 2px;
-    height: 200px;
+    height: 205px;
     position: relative;
     cursor: pointer;
 }
 .item-image{
     width: 150px;
-    height: 200px;
-    border-radius: 5px;
+    height: 205px;
+    border-radius: 7px;
    
 }
 

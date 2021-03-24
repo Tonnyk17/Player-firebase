@@ -1,26 +1,33 @@
-import React from "react";
+import React, { useContext } from "react";
 import Carouselitem from "./Carouselitem";
 import "../assets/styles/components/Carousel.css";
 import rightArrow from "../assets/images/right.svg";
 import leftArrow from "../assets/images/left.svg";
-import initialState from "../initialState";
+import AppContext from "../context/AppContext";
 
 
 
-const Carousel = ({title,id}) => {
 
-   
-    initialState();
-   
-    const fila = document.getElementById(`${id}`);
-
-    const handleMoveRight = () => (
-        fila.scrollLeft += fila.offsetWidth
-    );
-    const handleMoveLeft = () => (
-        fila.scrollLeft -= fila.offsetWidth
+const Carousel = ({title,id,info}) => {
+    
+    const { state, playVideo} = useContext(AppContext);
+    const { playing } = state;
+    
+    const handlePlayVideo = video => (
+        playVideo(video)
     );
 
+    const handleMoveRight = () => {
+        const fila = document.getElementById(`${id}`);
+            return  fila.scrollLeft += fila.offsetWidth
+    }
+    ;
+    const handleMoveLeft = () => {
+
+        const fila = document.getElementById(`${id}`);
+        return fila.scrollLeft -= fila.offsetWidth
+    };
+    
    
     return(
         <>
@@ -34,10 +41,13 @@ const Carousel = ({title,id}) => {
                     />
 
                     <div className="Carousel-container" id={id}>
-                        { initialState().map(item => (
-                        
-                                <Carouselitem Character={item} key={item.id}/>
+                        { info.map(item =>(
                            
+                                <Carouselitem 
+                                Character={item} 
+                                key={item.id} 
+                                />
+                            
                         ))
 
                         }

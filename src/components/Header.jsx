@@ -9,20 +9,18 @@ const Header = () => (
             <div className="header-container">
                 
                 <Link to="/">
-                <div className="title-container">
-                        
-
+                 <div className="title-container">
+                       
                         <img 
-                        className="page-icon" 
-                        src="https://i.postimg.cc/xC3xQL04/trailer-icon.png" 
-                        alt="page icon"
-                        />
-                        <h1 className="title">Trailers</h1>
+                            className="page-icon" 
+                            src="https://i.postimg.cc/xC3xQL04/trailer-icon.png" 
+                            alt="page icon"
+                            />
+                            <h1 className="title">Trailers</h1>
 
-                  
-
-                </div>
+                    </div>
                 </Link>
+                    
                 
             </div>
           
