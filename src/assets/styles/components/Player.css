@@ -52,4 +52,8 @@
         margin-top: 10px;
         position: static;
     }
+    .player-title,.player-info{
+        padding: 0;
+        margin: 10px 0;
+    }
 }

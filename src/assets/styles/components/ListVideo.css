@@ -6,7 +6,7 @@
     width: 100%;
     text-align: center;
     margin-top: 40px;
-    
+    cursor: pointer;
 }
 .card-image{
     width: 90%;

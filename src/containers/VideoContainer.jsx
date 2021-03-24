@@ -3,14 +3,16 @@ import Player from "../components/Player";
 import "../assets/styles/containers/VideoContainer.css";
 import ListVideo from "../components/ListVideo";
 import AppContext from "../context/AppContext";
-import NotFound from "../containers/NotFound";
-const VideoContainer = (props) => {
+
+const VideoContainer = () => {
 
     const { video } = useContext(AppContext);
+
+    const list = video.map(item => item.info)
     return(
         <div className="Video-container">
                 <Player/>
-                <ListVideo videos={video} key={video.id}/>
+                <ListVideo videos={list} key={list.id}/>
         </div>
     )
 }

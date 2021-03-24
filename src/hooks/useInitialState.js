@@ -5,7 +5,6 @@ const useInitialState = () => {
 
     const [video,setVideo] = useState([]);
     const [state, setState] = useState([]);
-    const [media, setPlayVideo] = useState([]);
     const play = playData;
 
     useLayoutEffect(() => {
@@ -26,23 +25,13 @@ const useInitialState = () => {
         })
          
     }
-    const playMedia = (payload) => {
-
-        setPlayVideo({
-            ...video,
-            playing: video.id === Number(payload)
-        })
-    }
-
-    
-    
+   
         
     return{
         video,
         state,
         playVideo,
-        playMedia,
-        media,
+        
     }
 }
 
