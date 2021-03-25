@@ -1,21 +1,15 @@
-import React, { useContext } from "react";
+import React from "react";
 import Carouselitem from "./Carouselitem";
 import "../assets/styles/components/Carousel.css";
 import rightArrow from "../assets/images/right.svg";
 import leftArrow from "../assets/images/left.svg";
-import AppContext from "../context/AppContext";
 
 
 
 
 const Carousel = ({title,id,info}) => {
     
-    const { state, playVideo} = useContext(AppContext);
-    const { playing } = state;
     
-    const handlePlayVideo = video => (
-        playVideo(video)
-    );
 
     const handleMoveRight = () => {
         const fila = document.getElementById(`${id}`);

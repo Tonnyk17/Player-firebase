@@ -6,11 +6,17 @@ const ListItem = ({card}) => {
 
     const handlePlayVideo = () => {
         playVideo(card)
+        window.scrollTo(0,0)
     }
 
     return(
         <div className="card-info" onClick={handlePlayVideo}>
-        <img src={card.secImage} alt={card.name} className="card-image"/>
+            <div className="play">
+                <div className="icon-container">
+                <i className="fas fa-play-circle second-button"/>
+                </div>
+               <img src={card.secImage} alt={card.name} className="card-image"/>
+            </div>
         <div className="card-info-text">
             <h5 className="video-name">{card.name}</h5>
             <p className="duration">{card.duration}</p>

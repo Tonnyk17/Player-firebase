@@ -10,7 +10,7 @@ const ListVideo = ({videos}) => {
     return(
         <div className="cards-container">
             {videos.map((item) => ( item.map(item => (
-                <ListItem card={item}/>
+                <ListItem card={item} key={item.id}/>
             ))
             ))
 

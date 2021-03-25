@@ -1,15 +1,15 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import "../assets/styles/components/Carouselitem.css";
 import AppContext from "../context/AppContext";
 
 const Carouselitem = ({Character}) => {
-   const {id} = Character
     const { playVideo } = useContext(AppContext);
 
     const handlePlay = () => {
+        
         playVideo(Character)
-         
+        window.scrollTo(0,0)
     }
 
     return(
