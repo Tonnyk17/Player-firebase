@@ -41,7 +41,7 @@ const Footer = () => (
                     target="_blank" 
                     rel="noopener"
                     > Tonyk
-                    </a> &lt;3
+                    </a> 💙
             </p>
         </div>
 

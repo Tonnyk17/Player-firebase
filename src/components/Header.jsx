@@ -5,7 +5,7 @@ import "../assets/styles/components/Header.css";
 
 
 const Header = () => (
-    <div className="header">
+    <div className="header" id="header">
             <div className="header-container">
                 
                 
