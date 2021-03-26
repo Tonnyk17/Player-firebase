@@ -21,7 +21,7 @@ const Player = () => {
                       <h4 className="player-title">{playing.name}</h4>
                         <div className="player-info">
                             <p>{playing.message}</p>
-                            <p>{playing.website} <a href={playing.url}>{playing.url}</a></p>
+                            <p>{playing.website} <a href={playing.url} target="_blank">{playing.url}</a></p>
                         </div>
                     </div>
              </div>

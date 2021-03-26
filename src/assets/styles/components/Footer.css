@@ -1,6 +1,7 @@
 .footer{
     text-align: center;
     background-color: rgb(39, 39, 39);
+    padding: 5px;
 }
 .footer-icons{
     width: 100%;

@@ -24,6 +24,12 @@ const useInitialState = () => {
             playing: payload
         })
     }
+    const removeVideo = (payload) => {
+        return({
+            ...video,
+            
+        })
+    }
    
         
     return{
