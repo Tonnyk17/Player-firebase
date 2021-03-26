@@ -1,0 +1,18 @@
+.Notfound{
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.text-container{
+    border: 2px solid whitesmoke;
+    border-radius: 7px;
+    background-color: whitesmoke;
+    text-align: center;
+    width: 200px;
+    height: auto;
+}
+.notfound-image{
+    margin: 10px;
+}
