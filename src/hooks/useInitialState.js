@@ -4,7 +4,7 @@ import playData from "../playData.json";
 const useInitialState = () => {
 
     const [video,setVideo] = useState([]);
-    const [state, setState] = useState([]);
+    const [state, setState] = useState({});
     const play = playData;
 
     useLayoutEffect(() => {

@@ -1,12 +1,14 @@
 import React, { useContext } from "react";
+import { useHistory } from "react-router-dom";
 import AppContext from "../context/AppContext";
 
 const ListItem = ({card}) => {
     const { playVideo } = useContext(AppContext);
-
+    const history = useHistory();
     const handlePlayVideo = () => {
         playVideo(card)
         window.scrollTo(0,0)
+        history.push(`/watch/${card.name}`)
     }
 
     return(

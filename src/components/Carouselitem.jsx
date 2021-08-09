@@ -1,15 +1,18 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import "../assets/styles/components/Carouselitem.css";
 import AppContext from "../context/AppContext";
 
 const Carouselitem = ({Character}) => {
     const { playVideo } = useContext(AppContext);
+    const history = useHistory();
 
     const handlePlay = () => {
         
         playVideo(Character)
         window.scrollTo(0,0)
+        history.push(`/watch/${Character.name}`)
+
     }
 
     return(
@@ -21,7 +24,7 @@ const Carouselitem = ({Character}) => {
                      alt={Character.name} 
                      className="item-image"
                 />
-                <Link to="/watch">
+               
                      <div className="item-info" onClick={handlePlay}>
                          <div className="play-button">
                              <i className="fas fa-play-circle size"/>
@@ -31,7 +34,7 @@ const Carouselitem = ({Character}) => {
                                  <p>{Character.duration}</p>
                             </div>
                      </div> 
-                </Link>
+             
             </div>
         </div>
     );

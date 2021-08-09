@@ -12,22 +12,22 @@ import useInitialState from "../hooks/useInitialState";
 
 const App = () => {
     const initialState = useInitialState();
-    
-    return(
+
+    return (
         <AppContext.Provider value={initialState}>
-             <BrowserRouter>
-                    <Layout>
-                        <Switch>
-                            <Route exact path="/" component={MainPage}/>
-                            <Route exact path="/watch" component={VideoContainer}/>
-                            <Route component={NotFound}/>
-                        </Switch>
-                    </Layout>
-                </BrowserRouter>
+            <BrowserRouter>
+                <Layout>
+                    <Switch>
+                        <Route exact path="/" component={MainPage} />
+                        <Route exact path="/watch/:watchVideo" component={VideoContainer} />
+                        <Route component={NotFound} />
+                    </Switch>
+                </Layout>
+            </BrowserRouter>
         </AppContext.Provider>
-        
+
     );
 };
-    
-      
+
+
 export default App;
