@@ -16,12 +16,12 @@ const Player = () => {
         <div className="player-container">
             <div>
                 <div className="video-container">
-                    <video className="player" color="white" autoPlay controls src={playing.video} />
+                    <video className="player" color="white" autoPlay controls src={playing.video}/>
                 </div>
                 <h4 className="player-title">{playing.name}</h4>
                 <div className="player-info">
-                    <p>{playing.message}</p>
-                    <p>{playing.website} <a href={playing.url} target="_blank">{playing.url}</a></p>
+                    <p className="player-info-text">{playing.message}</p>
+                    <p className="player-info-text">{playing.website} <a href={playing.url} target="_blank">{playing.url}</a></p>
                 </div>
             </div>
         </div>
